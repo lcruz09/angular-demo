@@ -10,7 +10,6 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { ActivityItemComponent } from './components/activity-item/activity-item.component';
 import { ActivityService } from './services/activity.service';
 import { ActivityDetailComponent } from './components/activity-detail/activity-detail.component';
-import { ArticleDetailGuard } from './services/activity-detail-guard.service';
 
 @NgModule({
   imports: [
@@ -31,8 +30,7 @@ import { ArticleDetailGuard } from './services/activity-detail-guard.service';
     ActivityDetailComponent
   ],
   providers: [
-    ActivityService,
-    ArticleDetailGuard
+    ActivityService
   ]
 })
 export class ActivityModule { }
