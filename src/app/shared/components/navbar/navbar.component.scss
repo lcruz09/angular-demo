@@ -1,0 +1,10 @@
+.navbar {
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+}
