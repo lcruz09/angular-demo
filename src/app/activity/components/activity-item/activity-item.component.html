@@ -1,0 +1,14 @@
+<mat-card class="activity">
+  <mat-card-header>
+    <i mat-card-avatar class="material-icons">image</i>
+    <mat-card-title>{{activity.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{activity.body}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="activity__actions" *ngIf="showViewMore">
+    <button mat-button (click)="viewMoreClick()">View More</button>
+  </mat-card-actions>
+</mat-card>
