@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MaterialModule } from './../material/material.module';
@@ -13,12 +14,13 @@ import { LoadingComponent } from './components/loading/loading.component';
 export let providers = [
   RequestService,
   UtilsService,
-  LoadingService
+  LoadingService,
 ];
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     RouterModule
   ],
