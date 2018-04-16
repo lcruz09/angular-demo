@@ -22,7 +22,6 @@ export class ActivityItemComponent implements OnInit {
   }
 
   public viewMoreClick(): void {
-    this.router.navigate([`/activity`, this.activity.id]);
+    this.router.navigate([`/${RoutesEnum.ACTIVITY_DETAIL}`, this.activity.id]);
   }
-
 }
