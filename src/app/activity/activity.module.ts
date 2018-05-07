@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ActivityComponent } from './components/activity/activity.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
 import { ActivityItemComponent } from './components/activity-item/activity-item.component';
 import { ActivityDetailComponent } from './components/activity-detail/activity-detail.component';
 import { ActivityService } from './services/activity.service';
@@ -19,12 +19,12 @@ import { MaterialModule } from '../material/material.module';
     ActivityRoutingModule
   ],
   declarations: [
-    ActivityComponent,
+    ActivitiesComponent,
     ActivityItemComponent,
     ActivityDetailComponent
   ],
   exports: [
-    ActivityComponent,
+    ActivitiesComponent,
     ActivityItemComponent,
     ActivityDetailComponent
   ],
