@@ -2,20 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { SharedModule } from './../shared/shared.module';
+import { MaterialModule } from './../material/material.module';
+import { ActivityRoutingModule } from './activity-routing.module';
+
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ActivityItemComponent } from './components/activity-item/activity-item.component';
-import { ActivityDetailComponent } from './components/activity-detail/activity-detail.component';
 import { ActivityService } from './services/activity.service';
-import { ActivityRoutingModule } from './activity-routing.module';
-import { SharedModule } from '../shared/shared.module';
-import { MaterialModule } from '../material/material.module';
+import { ActivityDetailComponent } from './components/activity-detail/activity-detail.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule,
     SharedModule.forRoot(),
+    MaterialModule,
     ActivityRoutingModule
   ],
   declarations: [

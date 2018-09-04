@@ -7,8 +7,7 @@ import { ActivityDetailComponent } from './components/activity-detail/activity-d
 
 const activityRoutes: Routes = [
   { path: RoutesEnum.ACTIVITIES, component: ActivitiesComponent },
-  { path: `${RoutesEnum.ACTIVITY_DETAIL}/:${RouteParamsEnum.ID}`,
-   component: ActivityDetailComponent }
+  { path: `${RoutesEnum.ACTIVITY_DETAIL}/:${RouteParamsEnum.ID}`, component: ActivityDetailComponent }
 ];
 
 @NgModule({

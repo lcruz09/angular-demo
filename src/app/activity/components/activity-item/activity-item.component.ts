@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { IActivity } from './../../models/activity.model';
+import { Router } from '@angular/router';
+import { RoutesEnum } from '../../../shared/utils/routes.enum';
 
 @Component({
   selector: 'dm-activity-item',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() activity: IActivity;
+  @Input() showViewMore: boolean;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    console.log(this.activity);
   }
 
+  public viewMoreClick(): void {
+    this.router.navigate([`/${RoutesEnum.ACTIVITY_DETAIL}`, this.activity.id]);
+  }
 }

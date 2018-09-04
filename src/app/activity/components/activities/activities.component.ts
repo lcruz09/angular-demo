@@ -10,8 +10,30 @@ import { UtilsService } from './../../../shared/services/utils.service';
 })
 export class ActivitiesComponent implements OnInit {
 
-  constructor() {}
+  public activities: Array<IActivity>;
+
+  constructor(
+    private activityService: ActivityService,
+    private utils: UtilsService
+  ) { }
 
   ngOnInit() {
+    this.loadActivities();
+  }
+
+  public loadActivities(): void {
+    this.utils.showLoading();
+    this.activityService.getActivities().subscribe(
+      (response: Array<IActivity>) => {
+        this.activities = response;
+      },
+      (err: any) => {
+        console.log(err);
+        this.utils.showError('Error Loading Activities');
+      },
+      () => {
+        this.utils.hideLoading();
+      }
+    );
   }
 }
